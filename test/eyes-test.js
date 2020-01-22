@@ -1,4 +1,3 @@
-var util = require('util');
 var eyes = require('../lib/eyes');
 
 eyes.inspect({
@@ -50,10 +49,10 @@ eyes.inspect([null], "null in array");
 
 var inspect = eyes.inspector({ stream: null });
 
-util.puts(inspect('something', "something"));
-util.puts(inspect("something else"));
+console.log(inspect('something', "something"));
+console.log(inspect("something else"));
 
-util.puts(inspect(["no color"], null, { styles: false }));
+console.log(inspect(["no color"], null, { styles: false }));
 
 eyes.inspect('This String is truncated completely', 'String truncated completely', { maxStringLength: 0 });
 eyes.inspect('This String is way too long', 'String too long', { maxStringLength: 12 });
